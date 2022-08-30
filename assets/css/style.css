@@ -10,10 +10,10 @@
     --mint-cream: hsl(146, 41%, 97%);
     --cadet-gray: hsl(215, 20%, 65%);
     --light-gray: hsl(216, 12%, 84%);
-    --charcoal_20: hsla(214, 19%, 29%, 0.2);
-    --charcoal_15: hsla(214, 19%, 29%, 0.15);
-    --charcoal_10: hsla(214, 19%, 29%, 0.10);
-    --sea-green: hsl(142, 72%, 29%);
+    --carcoal_20: hsla(214, 19%, 29%, 0.2);
+    --carcoal_15: hsla(214, 19%, 29%, 0.15);
+    --carcoal_10: hsla(214, 19%, 29%, 0.10);
+    --sea-green: hsl(120, 61%, 50%);
     --gainsboro: hsl(220, 13%, 91%);
     --white_70: hsla(0, 0%, 100%, 0.7);
     --gunmetal: hsl(215, 28%, 17%);
@@ -40,10 +40,10 @@
    * shadow
    */
     --shadow-1: 0 1px 2px hsla(0, 0%, 0%, 0.2);
-    --shadow-2: 0 10px 15px -5px var(--charcoal_20);
-    --shadow-3: 0 10px 25px -3px var(--charcoal_20);
-    --shadow-4: 0 0 3px var(--charcoal_15);
-    --shadow-5: 0 20px 25px -5px var(--charcoal_10), 0 10px 10px -5px var(--charcoal_10);
+    --shadow-2: 0 10px 15px -5px var(--carcoal_20);
+    --shadow-3: 0 10px 25px -3px var(--carcoal_20);
+    --shadow-4: 0 0 3px var(--carcoal_15);
+    --shadow-5: 0 20px 25px -5px var(--carcoal_10), 0 10px 10px -5px var(--carcoal_10);
     /**
    * border radius
    */
@@ -448,4 +448,214 @@ body {
 
 .hero-form .btn {
     max-width: 100%;
+}
+
+
+/* ******ABOUT***** */
+
+.about .section-title {
+    max-width: 20ch;
+}
+
+.about-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-16);
+    margin-block-end: 30px
+}
+
+.about-banner .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    color: var(--green-pigment);
+    padding: 30px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.about .section-text {
+    margin-block: 20px 25px;
+}
+
+
+/* SERVICE SET */
+
+.service :is(.section-title,
+.section-text) {
+    text-align: center;
+}
+
+.service .section-text {
+    margin-block: 15px 60px
+}
+
+.service-list {
+    display: grid;
+    gap: 30px;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-card .card-icon {
+    background-color: var(--mint-cream);
+    width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin-inline: auto;
+}
+
+.service-card .card-icon ion-icon {
+    font-size: 30px;
+    color: var(--green-pigment);
+    --ionicon-stroke-width: 45px;
+}
+
+.service-card .card-title {
+    margin-block: 25px 12px;
+}
+
+.service-card .card-text {
+    line-height: 1.6;
+}
+
+
+/* Property Set */
+
+.property :is(.section-title,
+.section-text) {
+    text-align: center;
+}
+
+.property .section-text {
+    margin-block: 15px 60px;
+}
+
+.property-list {
+    display: grid;
+    gap: 30px;
+}
+
+.property-card {
+    position: relative;
+    border-radius: var(--radius-12);
+    box-shadow: var(--shadow-4);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.property-card:is(:hover,
+ :focus-within) {
+    box-shadow: var(--shadow-5);
+}
+
+.property-card .card-action-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--white);
+    color: var(--maximum-red);
+    padding: 12px;
+    border-radius: 50px;
+}
+
+.property-card .card-content {
+    color: var(--oxford-blue);
+    padding: 25px;
+}
+
+.property-card .card-title {
+    font-size: var(--fs-4);
+    transition: var(--transition);
+}
+
+.property-card .card-title:is(:hover,
+ :focus) {
+    color: var(--green-pigment);
+}
+
+.property-card .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px 15px;
+    padding-block: 30px;
+    border-block: 1px solid var(--gainsboro);
+    margin-block: 30px
+}
+
+.property-card .card-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.property-card .item-icon {
+    color: var(--green-pigment);
+    font-size: 24px;
+}
+
+.property-card .item-icon ion-icon {
+    --ionicon-stroke-width: 40px
+}
+
+.property-card .card-meta {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.property-card .meta-title {
+    color: var(--cadet-gray);
+    margin-block-end: 10px;
+}
+
+.property-card .meta-text {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-500);
+    display: flex;
+    gap: 8px;
+}
+
+.property-card .rating-wrapper {
+    display: flex;
+    gap: 5px;
+    color: var(--mango);
+    font-size: 16px;
+}
+
+
+/* ******** Contact Set ***** */
+
+.contact {
+    padding-block-end: calc(var(--section-padding)*2);
+    text-align: center;
+}
+
+.contact .section-title {
+    font-weight: var(--fw-500);
+}
+
+.contact .section-text {
+    margin-block: 25px;
+}
+
+.contact .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-inline: auto;
+}
+
+.contact .btn ion-icon {
+    --ionicon-stroke-width: 50px;
 }
